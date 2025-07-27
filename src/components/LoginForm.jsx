@@ -34,12 +34,12 @@ function LoginForm({ onLogin }) {
       if (response.status === 200) {
         //setLoggedIn(true);
         onLogin();
-        alert("Uspešno ste se prijavili!");
+        alert("Uspesno ste se prijavili!");
         navigate("/dashboard");
       }
     } catch (err) {
-      console.error("Greška pri loginu:", err);
-      setError("Neispravno korisničko ime ili lozinka.");
+      console.error("Greska pri loginu:", err);
+      setError("Neispravno korisnisko ime ili lozinka.");
     }
   };
 

@@ -12,13 +12,13 @@ function UsageDailyDeviceChart() {
         setData(res.data);
       })
       .catch(err => {
-        console.error("Greška pri učitavanju dnevnih statistika:", err);
+        console.error("Greska pri ucitavanju dnevnih statistika:", err);
       });
   }, []);
 
   return (
     <div style={{ padding: "1rem" }}>
-      <h3>Potrošnja po danima i uređajima</h3>
+      <h3>Potrosnja po danima i uredjajima</h3>
       <BarChart width={700} height={350} data={data}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="date" />

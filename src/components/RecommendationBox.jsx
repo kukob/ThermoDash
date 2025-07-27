@@ -9,11 +9,11 @@ function RecommendationBox() {
   useEffect(() => {
     getCurrentRecommendation()
       .then((res) => setRecommendation(res.data))
-      .catch((err) => console.error("Greška u preporuci:", err));
+      .catch((err) => console.error("Greska u preporuci:", err));
   }, []);
 
   return (
-    <div style={{ padding: "1rem", background: "#f0f8ff", marginTop: "1rem" }}>
+    <div style={{ padding: "1rem", background: "#d4f3dbff", marginTop: "1rem" }}>
       <h3>Vremenska preporuka</h3>
       <p>{recommendation}</p>
     </div>

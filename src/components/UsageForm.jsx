@@ -20,7 +20,7 @@ function UsageForm() {
   useEffect(() => {
     getAllDevices()
       .then((res) => setDeviceTypes(res.data))
-      .catch((err) => console.error("Greška pri učitavanju uređaja:", err));
+      .catch((err) => console.error("Greska pri ucitavanju uređaja:", err));
   }, []);
 
   const handleChange = (e) => {
@@ -59,7 +59,7 @@ function UsageForm() {
       <h2>Unos potrosnja uredjaja</h2>
 
       <form onSubmit={handleSubmit}>
-        <label>Uređaj:</label>
+        <label>Uredjaj:</label>
         <select
           name="deviceTypeId"
           value={formData.deviceTypeId}
@@ -97,7 +97,7 @@ function UsageForm() {
           onChange={handleChange}
         />
 
-        <button type="submit">Pošalji</button>
+        <button type="submit" style={{backgroundColor: "#4CAF50"}} >Posalji</button>
       </form>
 
       {message && <p style={{ marginTop: "1rem", color: "green" }}>{message}</p>}

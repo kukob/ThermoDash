@@ -16,15 +16,17 @@ function HourlyRecommendationBox() {
         setLoading(false);
       })
       .catch((err) => {
-        setError("Nema preporuka ili korisnik nema podešen grad.");
+        setError("Nema preporuka ili korisnik nema podesen grad.");
         setLoading(false);
       });
   }, []);
 
   return (
     <div style={{ border: "1px solid #ddd", padding: "1rem", margin: "1rem 0", borderRadius: "8px", backgroundColor: "#f9f9f9" }}>
-      <h3>Preporuke za danas</h3>
 
+
+
+      <h3>Preporuke za naredni period</h3>
       {loading ? (
         <p>Učitavanje preporuka...</p>
       ) : error ? (
@@ -40,7 +42,13 @@ function HourlyRecommendationBox() {
           ))}
         </ul>
       )}
+
+
+
+
+
     </div>
+
   );
 }
 

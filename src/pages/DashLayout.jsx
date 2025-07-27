@@ -53,8 +53,7 @@ return (
 
         <button 
           onClick={onLogout} 
-          className="dash-layout__logout-button"
-        >
+          className="dash-layout__logout-button">
           Odjavi se
         </button>
       </nav>

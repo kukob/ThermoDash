@@ -15,19 +15,19 @@ function DevicePieChart() {
       setData(response.data);
     })
     .catch((error) => {
-      console.error("Greška pri učitavanju podataka za pie chart:", error);
+      console.error("Greska pri ucitavanju podataka za pie chart:", error);
     })
     .finally(() => setLoading(false));
   }, []);
 
   return (
     <div>
-      <h3>📊 Udeo klime i grejanja u ukupnoj potrošnji</h3>
+      <h3>Prikaz koliko trosi klima koliko grejanje</h3>
 
       {loading ? (
-        <p>Učitavanje...</p>
+        <p>Ucitavanje</p>
       ) : data.length === 0 ? (
-        <p>Nema podataka za prikaz.</p>
+        <p>Nema podataka za prikaz</p>
       ) : (
         <PieChart width={400} height={300}>
           <Pie

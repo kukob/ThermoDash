@@ -14,20 +14,20 @@ function DailyLineChart() {
       setData(res.data);
     })
     .catch(err => {
-      console.error("Greška pri učitavanju podataka:", err);
+      console.error("Greska pri ucitavanju podataka:", err);
     });
   }, []);
 
   return (
     <div>
-      <h2>Istorija potrošnje po danima</h2>
+      <h3>Istorija potrosnje po danima</h3>
       <LineChart width={700} height={350} data={data}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="date" />
         <YAxis label={{ value: "kWh", angle: -90, position: "insideLeft" }} />
         <Tooltip />
         <Legend />
-        <Line type="monotone" dataKey="consumption" stroke="#8884d8" name="Potrošnja (kWh)" />
+        <Line type="monotone" dataKey="consumption" stroke="#8884d8" name="Potrosnja (kWh)" />
       </LineChart>
     </div>
   );

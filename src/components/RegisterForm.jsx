@@ -13,9 +13,9 @@ function RegisterForm() {
     e.preventDefault();
     try {
       await registerUser(form);
-      alert("Registracija uspešna!");
+      alert("Registracija uspesna!");
     } catch (err) {
-      setError(err.response?.data || "Greška");
+      setError(err.response?.data || "Greska");
     }
   };
 
@@ -23,7 +23,7 @@ function RegisterForm() {
     <div className="form-container">
     <form onSubmit={handleSubmit}>
       <h2>Registracija</h2>
-      <input name="username" placeholder="Korisničko ime" onChange={handleChange} required />
+      <input name="username" placeholder="Korisnicko ime" onChange={handleChange} required />
       <input name="email" placeholder="Email" onChange={handleChange} required />
       <input name="password" type="password" placeholder="Lozinka" onChange={handleChange} required />
       <input name="city" placeholder="Grad" onChange={handleChange} />

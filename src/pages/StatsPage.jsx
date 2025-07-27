@@ -3,6 +3,7 @@ import DailyLineChart from "../components/DailyLineChart";
 import DevicePieChart from "../components/DevicePieChart";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import "../styles/StatsPage.css";
 
 const slides = [
   { component: <UsageStats />, label: "Statistika" },
@@ -29,17 +30,17 @@ export default function StatsPage() {
     //   <DailyLineChart />
     //   <DevicePieChart />
     // </>
-    <div>
-     <div style={{ padding: "1rem", marginBottom: "1rem" }}>
-        <h2>{slides[currentSlide].label}</h2>
-        {slides[currentSlide].component}
+    <div className="stats-page">
+      <div className="stats-page__container">
+        <h2 className="stats-page__title">{slides[currentSlide].label}</h2>
+         <div className="stats-page__content">
+          {slides[currentSlide].component}
+        </div>
       </div>
 
-      <div>
-        <button onClick={prev}>⬅️ Nazad</button>
-        <button onClick={next} style={{ marginLeft: "10px" }}>
-          Dalje ➡️
-        </button>
+      <div className="stats-page__buttons">
+        <button onClick={prev} className="stats-page__button" > Nazad</button>
+        <button onClick={next} className="stats-page__button" >Dalje </button>
       </div>
     </div>
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import "../styles/LoginRegisterForm.css"
 import { useNavigate } from "react-router-dom";
 
 function LoginForm({ onLogin }) {
@@ -43,12 +44,12 @@ function LoginForm({ onLogin }) {
   };
 
   return (
-    <div>
+    <div className="form-container">
       <h2>Prijava</h2>
       <form onSubmit={handleSubmit}>
         <input
           name="username"
-          placeholder="Korisničko ime"
+          placeholder="Korisnicko ime"
           value={form.username}
           onChange={handleChange}
           required
@@ -63,7 +64,7 @@ function LoginForm({ onLogin }) {
         />
         <button type="submit">Prijavi se</button>
       </form>
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && <p className="error-message">{error}</p>}
       {loggedIn && <p style={{ color: "green" }}>Uspešna prijava!</p>}
     </div>
   );

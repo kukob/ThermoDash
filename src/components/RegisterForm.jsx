@@ -20,6 +20,7 @@ function RegisterForm() {
   };
 
   return (
+    <div className="form-container">
     <form onSubmit={handleSubmit}>
       <h2>Registracija</h2>
       <input name="username" placeholder="Korisničko ime" onChange={handleChange} required />
@@ -29,6 +30,7 @@ function RegisterForm() {
       <button type="submit">Registruj se</button>
       {error && <p style={{ color: 'red' }}>{error}</p>}
     </form>
+    </div>
   );
 }
 

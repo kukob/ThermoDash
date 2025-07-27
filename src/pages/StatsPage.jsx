@@ -7,7 +7,7 @@ import { useState } from "react";
 const slides = [
   { component: <UsageStats />, label: "Statistika" },
   { component: <DailyLineChart />, label: "Linijski grafikon" },
-  { component: <DevicePieChart />, label: "Udeo uređaja" },
+  { component: <DevicePieChart />, label: "Udeo uredjaja" },
 
 ];
 

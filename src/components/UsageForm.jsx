@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { getAllDevices } from '../services/DeviceService';
 import { submitUsage } from '../services/UsageService';
+import '../styles/UsageForm.css';
 
 
 function UsageForm() {
@@ -40,7 +41,7 @@ function UsageForm() {
         usageHours: parseInt(formData.usageHours),
       });
 
-      setMessage("Uspešno poslato!");
+      setMessage("Uspesno poslato!");
       setFormData({
         deviceTypeId: "",
         date: "",
@@ -48,14 +49,14 @@ function UsageForm() {
         note: ""
       });
     } catch (err) {
-      console.error("Greška:", err);
-      setMessage("Greška: " + (err.response?.data || "Neuspešno"));
+      console.error("Greska:", err);
+      setMessage("Greska: " + (err.response?.data || "Neuspesno"));
     }
   };
 
   return (
-    <div style={{ padding: "1rem", maxWidth: "400px", margin: "0 auto" }}>
-      <h2>Unos potrošnje uređaja</h2>
+    <div  className="usage-form-container">
+      <h2>Unos potrosnja uredjaja</h2>
 
       <form onSubmit={handleSubmit}>
         <label>Uređaj:</label>
@@ -65,13 +66,13 @@ function UsageForm() {
           onChange={handleChange}
           required
         >
-          <option value="">-- Izaberi uređaj --</option>
+          <option value="">-- Izaberi uredjaj --</option>
           {deviceTypes.map(device => (
             <option key={device.id} value={device.id}>{device.name}</option>
           ))}
         </select>
 
-        <label>Datum korišćenja:</label>
+        <label>Datum koriscenja:</label>
         <input
           type="date"
           name="date"
@@ -80,7 +81,7 @@ function UsageForm() {
           required
         />
 
-        <label>Broj sati korišćenja:</label>
+        <label>Broj sati koriscenja:</label>
         <input
           type="number"
           name="usageHours"

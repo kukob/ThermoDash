@@ -34,7 +34,7 @@ function Dashboard({}) {
 
       
       <div >
-        <h2>Unos potrošnje</h2>
+        <h2>Unos potrosnje</h2>
         <UsageForm />
       </div>
 

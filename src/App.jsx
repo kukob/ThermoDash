@@ -31,19 +31,24 @@ function App() {
   const [showLogin, setShowLogin] = useState(true);
 
   return (
+    
     <Router>
 
       {/* <div className="background" /> */}
       <div className="App">
         <Routes>
 
-  
+          
           <Route
             path="/"
             element={
-              !isLoggedIn ? (         
+              !isLoggedIn ? (     
+                <div className="form-wrapper"> 
+                 <div className="form-left">
                 <>
-                  <h1>{showLogin ? "Prijava" : "Registracija"}</h1>
+                  {/* <h1>{showLogin ? "Prijava" : "Registracija"}</h1> */}
+                  
+                  <h1>ThermoDash</h1>
 
                   {showLogin ? (
                     <LoginForm onLogin={handleLogin} />
@@ -52,15 +57,24 @@ function App() {
                   )}
 
                   <p>
-                    {showLogin ? "Nemate nalog?" : "Već imate nalog?"}
+                    {/* {showLogin ? "Nemate nalog?" : "Već imate nalog?"} */}
                     <button
                       onClick={() => setShowLogin(!showLogin)}
                       style={{ marginLeft: "10px" }}
                     >
                       {showLogin ? "Registruj se" : "Prijavi se"}
                     </button>
+                    
                   </p>
+                  
                 </>
+                </div>
+                  <div className="form-right">
+                    <img src="/energy.jpeg" alt="Background" />
+                  </div>
+                </div>    
+
+                
               ) : (
                 <Navigate to="/dashboard" /> 
               )
@@ -88,6 +102,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+    
   );
 }
 

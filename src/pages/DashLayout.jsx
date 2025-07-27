@@ -34,19 +34,19 @@ return (
               to="stats" 
               className={({ isActive }) => isActive ? 'active' : ''}
             >
-              📊 Statistika
+              Statistika
             </NavLink>
             <NavLink 
               to="input" 
               className={({ isActive }) => isActive ? 'active' : ''}
             >
-              ✍️ Unos podataka
+              Unos podataka
             </NavLink>
             <NavLink 
               to="recommendations" 
               className={({ isActive }) => isActive ? 'active' : ''}
             >
-              💡 Preporuke
+              Preporuke
             </NavLink>
           </div>
         </div>

@@ -28,7 +28,7 @@ function HourlyRecommendationBox() {
 
       <h3>Preporuke za naredni period</h3>
       {loading ? (
-        <p>Učitavanje preporuka...</p>
+        <p>Ucitavanje preporuka...</p>
       ) : error ? (
         <p style={{ color: "red" }}>{error}</p>
       ) : recommendations.length === 0 ? (

@@ -1,6 +1,8 @@
 import UsageStats from "../components/UsageStats";
 import DailyLineChart from "../components/DailyLineChart";
 import DevicePieChart from "../components/DevicePieChart";
+import UsageRSD from "../components/UsageRSD";
+import MonthlyChart from "../components/MonthlyChart";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import "../styles/StatsPage.css";
@@ -8,15 +10,16 @@ import "../styles/StatsPage.css";
 const slides = [
   { component: <UsageStats />, label: "Statistika" },
   { component: <DailyLineChart />, label: "Linijski grafikon" },
+  { component: <UsageRSD />, label: "Potrosnja u RSD" },
   { component: <DevicePieChart />, label: "Udeo uredjaja" },
 
 ];
 
 export default function StatsPage() {
     // <nav style={{ marginBottom: "1rem" }}>
-    //     <NavLink to="stats" style={{ marginRight: "10px" }}>📊 Statistika</NavLink>
-    //     <NavLink to="input" style={{ marginRight: "10px" }}>✍️ Unos podataka</NavLink>
-    //     <NavLink to="recommendations">💡 Preporuke</NavLink>
+    //     <NavLink to="stats" style={{ marginRight: "10px" }}>Statistika</NavLink>
+    //     <NavLink to="input" style={{ marginRight: "10px" }}>Unos podataka</NavLink>
+    //     <NavLink to="recommendations">Preporuke</NavLink>
     //   </nav>
 
     const [currentSlide, setCurrentSlide] = useState(0);

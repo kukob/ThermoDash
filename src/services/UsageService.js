@@ -34,3 +34,9 @@ export const submitUsage = (usageData) => {
     withCredentials: true,
   });
 };
+
+export const getMonthlyConsumptionByDevice = (usageData) => {
+  return axios.post("http://localhost:8080/api/usage/stats/monthly", usageData, {
+    withCredentials: true,
+  });
+};

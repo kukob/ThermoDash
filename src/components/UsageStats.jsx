@@ -22,14 +22,14 @@ function UsageStats() {
 
   return (
     <div style={{ padding: "1rem" }}>
-      <h3>Prikaz potrosnje na nivou nedelje, meseca, godine</h3>
+      {/* <h3>Prikaz potrosnje na nivou nedelje, meseca, godine</h3> */}
       <BarChart width={500} height={300} data={data}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="period" />
         <YAxis label={{ value: "kWh", angle: -90, position: "insideLeft" }} />
         <Tooltip />
         <Legend />
-        <Bar dataKey="consumption" fill="#82ca9d" name="Potrosnja " />
+        <Bar dataKey="consumption" fill="#8884d8" name="Potrosnja " />
       </BarChart>
     </div>
   );

@@ -29,6 +29,7 @@ export const getUsageSummaryStats = () => {
   });
 };
 
+
 export const submitUsage = (usageData) => {
   return axios.post("http://localhost:8080/api/usage", usageData, {
     withCredentials: true,
@@ -37,6 +38,12 @@ export const submitUsage = (usageData) => {
 
 export const getMonthlyConsumptionByDevice = (usageData) => {
   return axios.post("http://localhost:8080/api/usage/stats/monthly", usageData, {
+    withCredentials: true,
+  });
+};
+
+export const getAverage = () => {
+  return axios.get("http://localhost:8080/api/usage/stats/average", {
     withCredentials: true,
   });
 };

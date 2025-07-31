@@ -7,28 +7,30 @@ import SolarStats  from "../components/SolarStats";
 import StatsCombined from "../components/StatsCombined";
 import CombinedEnergyChart from "../components/CombinedChart";
 import CombinedRSD from "../components/CombinedRSD";
+import SolarCoverage from "../components/SolarCoverage";
 import MonthlyChart from "../components/MonthlyChart";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import StatsAverage from "../components/StatsAverage";
 import "../styles/StatsPage.css";
 
 const slides = [
-  { component: <UsageStats />, label: "Potrosnja energije za ovu nedelju mesec i godinu" },
+  // { component: <UsageStats />, label: "Statistika" },
   // { component: <SolarStats />, label: "Statistika solarne ene" },
-  // { component: <StatsCombined />, label: "Statistika potrosnje i proizvodnje" },
-  { component: <DailyLineChart />, label: "Potrosnja energije dnevno" },
-  // { component: <DailyProductionChart />, label: "Proizvodnja energije " },
-  // { component: <CombinedEnergyChart />, label: "Zajednicki prikaz " },
-  { component: <UsageRSD />, label: "Potrosnja u RSD" },
-  // { component: <CombinedRSD />, label: "Potrosnja u RSD" },
-  { component: <DevicePieChart />, label: "Procenti uredjaja u potrosnji" },
- { component: <StatsAverage />, label: "Potrosnja prosecnog korisnika" },
+  { component: <StatsCombined />, label: "Potrosnja energije za ovu nedelju mesec i godinu" },
+//   { component: <DailyLineChart />, label: "Linijski grafikon" },
+//   { component: <DailyProductionChart />, label: "Proizvodnja energije " },
+  { component: <CombinedEnergyChart />, label: "Proizvodnja energije dnevno " },
+  // { component: <UsageRSD />, label: "Potrosnja u RSD" },
+  { component: <CombinedRSD />, label: "Proizvodnja u RSD" },
+  { component: <SolarCoverage />, label: "Procenat potrosnje prekriven solarno" },
+  
+
+
 
   
 ];
 
-export default function StatsPage() {
+export default function StatsSolarPage() {
     // <nav style={{ marginBottom: "1rem" }}>
     //     <NavLink to="stats" style={{ marginRight: "10px" }}>Statistika</NavLink>
     //     <NavLink to="input" style={{ marginRight: "10px" }}>Unos podataka</NavLink>

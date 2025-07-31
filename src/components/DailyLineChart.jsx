@@ -20,7 +20,7 @@ function DailyLineChart() {
 
   return (
     <div>
-      <h3>Istorija potrosnje po danima</h3>
+      {/* <h3>Istorija potrosnje po danima</h3> */}
       <LineChart width={700} height={350} data={data}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="date" />

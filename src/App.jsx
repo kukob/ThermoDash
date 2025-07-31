@@ -9,7 +9,10 @@ import LoginForm from "./components/LoginForm";
 import Dashboard from "./pages/DashLayout";
 import StatsPage from "./pages/StatsPage";
 import InputPage from "./pages/InputPage";
+import InputSolarPage from "./pages/InputSolarPage"
 import RecommendationsPage from "./pages/RecommendationPage";
+import StatsSolarPage from './pages/StatsSolarPage';
+
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
@@ -96,6 +99,8 @@ function App() {
             <Route path="stats" element={<StatsPage />} />
             <Route path="input" element={<InputPage />} />
             <Route path="recommendations" element={<RecommendationsPage />} />
+            <Route path="solar" element={<InputSolarPage />} />
+            <Route path="stats_solar" element={<StatsSolarPage />} />
           </Route>
 
           <Route path="*" element={<Navigate to="/" />} />

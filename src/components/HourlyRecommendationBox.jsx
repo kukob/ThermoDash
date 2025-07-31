@@ -44,14 +44,6 @@ function HourlyRecommendationBox() {
       ) : recommendations.length === 0 ? (
         <p>Nema preporuka za prikaz.</p>
       ) : (
-        // <ul>
-        //   {recommendations.map((rec, index) => (
-        //     <li key={index}>
-        //       <strong>{rec.timeRange}</strong>: {rec.recommendation}
-        //     </li>
-        //   ))}
-        // </ul>
-
 
         <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
           {Object.keys(groupedByDate)

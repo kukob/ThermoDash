@@ -34,20 +34,34 @@ return (
               to="stats" 
               className={({ isActive }) => isActive ? 'active' : ''}
             >
-              Statistika
+              Potrosnja energije
+            </NavLink>
+            <NavLink 
+              to="stats_solar" 
+              className={({ isActive }) => isActive ? 'active' : ''}
+            >
+              Proizvodnja energije
             </NavLink>
             <NavLink 
               to="input" 
               className={({ isActive }) => isActive ? 'active' : ''}
             >
-              Unos podataka
+              Unos potrosnje
             </NavLink>
             <NavLink 
+              to="solar" 
+              className={({ isActive }) => isActive ? 'active' : ''}
+            >
+              Unos solarnog panela
+            </NavLink>
+                        <NavLink 
               to="recommendations" 
               className={({ isActive }) => isActive ? 'active' : ''}
             >
               Preporuke
             </NavLink>
+   
+            
           </div>
         </div>
 

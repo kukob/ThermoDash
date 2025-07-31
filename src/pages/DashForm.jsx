@@ -45,9 +45,9 @@ function Dashboard({}) {
       </div>
 
       <div>
-        <button onClick={prev}>⬅️ Nazad</button>
+        <button onClick={prev}>⬅Nazad</button>
         <button onClick={next} style={{ marginLeft: "10px" }}>
-          Dalje ➡️
+          Dalje 
         </button>
       </div>
     </div>

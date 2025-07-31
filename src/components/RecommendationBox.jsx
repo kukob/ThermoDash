@@ -13,8 +13,8 @@ function RecommendationBox() {
   }, []);
 
   return (
-    <div style={{ padding: "1rem", background: "#d4f3dbff", marginTop: "1rem" }}>
-      <h3>Vremenska preporuka</h3>
+    <div style={{ padding: "1rem", background: "#d4f3dbff", marginTop: "1rem",    fontFamily: "'Segoe UI', 'Roboto', 'Helvetica', sans-serif",  fontSize: "1.03rem", textAlign: "center",}}>
+      <h3>Trenutna vremenska preporuka:</h3>
       <p>{recommendation}</p>
     </div>
   );

@@ -22,7 +22,7 @@ function DevicePieChart() {
 
   return (
     <div>
-      <h3>Prikaz koliko trosi klima koliko grejanje</h3>
+      {/* <h3>Prikaz koliko trosi klima koliko grejanje</h3> */}
 
       {loading ? (
         <p>Ucitavanje</p>
